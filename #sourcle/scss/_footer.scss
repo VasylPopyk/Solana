@@ -1,0 +1,51 @@
+.footer{
+    width: 100%;
+    border-top: 1px solid #8488953b;
+    .footer_content{
+        padding: 80px 0;
+        @include flex(row, center, space-between, nowrap);
+        .footer_info{
+            @include flex(column, flex-start, flex-start, nowrap);
+            img{margin: 10px 0;}
+            h3{
+                @include font(16px, 400, white, 20px);
+                font-family: 'Roboto';
+                margin: 10px 0;
+            }
+            .social_media{
+                @include flex(row, center, center, nowrap);
+                margin: 10px 0;
+                a{  margin-right: 10px;
+                    img{}
+                }
+            }
+            p{font-family: 'Roboto';@include font(16px, 400, #848895, 20px);}
+        }
+        .footer_menu{
+            @include flex(row, flex-start, center, nowrap);
+            .footer_menu_item{
+                @include flex(column, flex-start, flex-start, nowrap);
+                width: 161px;
+                padding: 0 20px;
+                h3{font-family: 'Roboto';@include font(16px, 400, white, 20px);}
+                a{font-family: 'Roboto';@include font(15px, 300, #848895, 20px); margin: 5px 0; text-decoration: none;}
+            }
+            .lang{
+                @include flex(row, center, center, nowrap);
+                margin-top: 15px;
+                img{margin: 0 5px;}
+                div{
+                    @include flex(column, flex-start, flex-start, nowrap);
+                    a{font-family: 'Roboto';@include font(15px, 300, #848895, 20px); text-transform: uppercase; margin-bottom: 5px; text-decoration: none;}
+                }
+            }
+            @media(max-width: 550px){
+                flex-direction: column;
+            }
+        }
+        @media(max-width: 990px){
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}

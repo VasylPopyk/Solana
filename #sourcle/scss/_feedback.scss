@@ -1,0 +1,106 @@
+.feedback{
+    .feedback_content{
+        @include flex(row, center, center, nowrap);
+        @media(max-width: 1200px){
+            flex-wrap: wrap;
+            .feedback_content_item{
+                margin: 20px;
+            }
+        }
+        .feedback_content_item{
+            width: 530px;
+            height: 200px;
+            border-radius: 5px;
+            background-color: #19161C;
+            margin: 12px;
+            padding: 50px;
+            @include flex(column, flex-start, space-between, nowrap);
+            h1{
+                @include font(36px, 400, white, 38px);
+                margin: 5px 0;
+                font-family: 'Roboto';
+            }
+            p{
+                @include font(17px, 400, #C4C4C4, 30px);
+                margin: 5px 0;
+                font-family: 'Roboto';
+            }
+            form{
+                @include flex(row, center, space-between, nowrap);
+                width: 400px;
+                height: 54px;
+                border-radius: 20px;
+                background-color: #000000;
+                margin: 0px auto;
+                input{
+                    width: 100%;
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    @include font(15px, 400, white, 20px);
+                    margin: 5px 0;
+                    font-family: 'Roboto';
+                    padding: 22px 10px;
+                }
+                button{
+                    width :120px;
+                    height: 36px;
+                    background-color: #14F195;
+                    border-radius: 20px;
+                    @include font(15px, 400, black, 20px);
+                    font-family: 'Roboto';
+                    margin: 10px;
+                    padding: 0 10px;
+                    border: none;
+                    cursor: pointer;
+                    text-transform: uppercase;
+                    transition: all 0.5s ease 0s;
+                    &:hover{
+                        transition: all 0.5s ease 0s;
+                        box-shadow: 0px 0px 10px #14F195;
+                    }
+                }
+            }
+            .buttons{
+                margin: 0px auto;
+                @include flex(row, center, center, nowrap);
+                button{
+                    cursor: pointer;
+                    width: 190px;
+                    height: 44px;
+                    border-radius: 20px;
+                    border: 1px solid white;
+                    background-color: transparent;
+                    margin: 11px;
+                    transition: all 0.5s ease 0s;
+                    &:hover{
+                        transition: all 0.5s ease 0s;
+                        box-shadow: 0px 0px 10px white;
+                    }
+                    @include flex(row, center, center, nowrap);
+                    h1{
+                        @include font(15px, 400, white, 20px);
+                        font-family: 'Roboto';
+                        text-transform: uppercase;
+                    }
+                    img{margin: 0 5px;}
+                }
+            }
+        }
+        @media(max-width: 550px){
+            .feedback_content_item{
+                width: 350px;
+                height: auto;
+                padding: 10px;
+                h1{font-size: 20px;}
+                p{font-size: 16px;}
+                form{
+                    width: 100%;
+                }
+                .buttons{
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,78 @@
+.ecosystem{
+    @include flex(column, center, center, nowrap);
+    .ecosystem_head{
+        width: 100%;
+        @include flex(column, flex-start, flex-start, nowrap);
+        
+        h1 {
+            @include font(38px, 400, white, 38px);
+            margin: 5px 0;
+            font-family: 'Roboto';
+        }
+
+        p {
+            @include font(20px, 300, white, 20px);
+            margin: 5px 0;
+            font-family: 'Roboto';
+        }
+    }
+    .ecosystem_content{
+        @include flex(row, center, center, wrap);
+        @media(max-width: 400px){
+            flex-direction: column;
+        }
+        .ecosystem_content_item{
+            width: 300px;
+            height: 282px;
+            background-color: #19161C;
+            border-radius: 5px;
+            @include flex(column, flex-start, flex-start, nowrap);
+            margin: 12px;
+            padding: 32px;
+            transition: all 0.5s ease 0s;
+            position: relative;
+            top: 0;
+            left: 0;
+            &:hover{
+                box-shadow: 0px 0px 10px darkblue;
+                transition: all 0.5s ease 0s;
+            }
+            &:hover::after{
+                content: "";
+                transition: all 0.5s ease 0s;
+                bottom: 0;
+                left: 0;
+                height: 30%;
+                background-color: purple;
+            }
+            h3{
+                @include font(12px, 400, #9945FF, 19px);
+                margin: 10px 0;
+                font-family: 'Roboto';
+                text-transform: uppercase;
+            }
+            h1{
+                @include font(19px, 400, white, 20px);
+                margin: 15px 0;
+                font-family: 'Roboto';
+            }
+            p{
+                @include font(16px, 300, white, 26px);
+                margin: 5px 0;
+                font-family: 'Roboto';
+            }
+            .link{
+                width: 100%;
+                margin-top: 20px;
+                @include flex(row, center, space-between, nowrap);
+                a{
+                    @include font(11px, 400, white, 14px);
+                font-family: 'Roboto';
+                text-decoration: none;
+                text-transform: uppercase;
+                }
+                img{}
+            }
+        }
+    }
+}

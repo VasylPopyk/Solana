@@ -1,0 +1,73 @@
+.sourcle{
+    @include flex(column, center, center, nowrap);
+    .sourcle_head {
+        width: 100%;
+        @include flex(column, flex-start, flex-start, nowrap);
+        
+        h1 {
+            @include font(38px, 400, white, 38px);
+            margin: 5px 0;
+            font-family: 'Roboto';
+        }
+
+        p {
+            @include font(20px, 300, white, 20px);
+            margin: 5px 0;
+            font-family: 'Roboto';
+        }
+    }
+    .sourcle_content{
+        width: 100%;
+        @include flex(row, center, center, wrap);
+        .sourcle_content_item{
+            width: 522px;
+            height: auto;
+            margin: 20px;
+            @media(max-width: 640px){
+                margin: 0;
+                padding: 10px;
+            }
+            .sourcle_content_item_head{
+                @include flex(row, center, space-between, nowrap);
+                padding: 30px 0;
+                h1{
+                    @include font(32px, 300, white, 33px);
+                    margin: 5px 0;
+                    font-family: 'Roboto';
+                }
+                a{  
+                    @include flex(row, center, center, nowrap);
+                    text-decoration: none;
+                    h3{
+                        @include font(15px, 400, white, 20px);
+                    font-family: 'Roboto';
+                    margin: 0 10px;
+                    text-transform: uppercase;
+                    }
+                    width: 150px;
+                    height: 46px;
+                    border-radius: 20px;
+                    border: 1px solid white;
+                }
+            }
+            .sourcle_content_item_content{
+                padding: 30px 0;
+                border-top: 1px solid #848895;
+                p{      @include font(20px, 400, white, 22px);font-family: 'Roboto';}
+                @media(max-width: 640px){
+                    width: 100%;
+                    padding: 0;
+                }
+                &.image{
+                    border-top: none;
+                    padding: 0;
+                    img{
+                        @media(max-width: 640px){
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

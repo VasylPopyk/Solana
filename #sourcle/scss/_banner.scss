@@ -1,0 +1,56 @@
+.banner{
+    .banner_text{
+        @include flex(column, flex-start, flex-start, nowrap);
+        h1{ @include font(94px, 500, white, 96px); margin: 10px 0; font-family: 'Roboto';}
+        p{ @include font(24px, 400, #C4C4C4, 26px); margin: 10px 0px; font-family: 'Roboto';}
+        .buttons{
+            @include flex(row, center, center, nowrap);
+            button{
+                @include font(15px, 500, black, 20px); font-family: 'Roboto';
+                padding: 10px 20px;
+                border-radius: 20px;
+                background-color: #14F195;
+                margin-left: 8px;
+                text-transform: uppercase;
+                border: none;
+                cursor: pointer;
+                transition: all 0.5s ease 0s;
+                &:hover{
+                    transition: all 0.5s ease 0s; box-shadow: 0px 0px 10px #14F195;
+                }
+                &:nth-child(2){
+                    background-color: transparent;
+                    border: 1px solid #C4C4C4;
+                    color: #C4C4C4;
+                    @include flex(row, center, center, nowrap);
+                    img{margin-left: 3px;}
+                    &:hover{
+                        transition: all 0.5s ease 0s; box-shadow: 0px 0px 10px #C4C4C4;
+                    }
+                }
+            }
+        }
+    }
+    .banner_content{
+        img{}
+    }
+    @media(max-width: 990px){
+        flex-wrap: wrap;
+        padding: 60px 0;
+        @include flex(column, center, center, nowrap);
+        .banner_text{
+            width: 100%;
+            @include flex(column, center, center, nowrap);
+            h1{
+                font-size: 40px;
+            }
+        }
+        .banner_content{
+            img{
+                width :100%;
+            height: auto;
+            max-width: 500px;
+            }
+        }
+    }
+}

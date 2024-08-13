@@ -1,0 +1,30 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+@import "mixins";
+.container{
+    @include flex(row, center, space-between, nowrap);
+    width: 1286px;
+    margin: 0px auto;
+    padding: 0px px;
+    @media(max-width: 1286px){width: 1050px;}
+    @media(max-width: 1050px){width: 990px; padding: 0px 4px;}
+    @media(max-width: 990px){width: 100%; padding: 0px 3px;}
+}
+.wrapper{
+    @import "header";
+    @import "footer";
+}
+.page{
+    margin-top: 40px;
+    @import "banner";
+    @import "course";
+    @import "ecosystem";
+    @import "sourcle";
+    @import "feedback";
+}
+.section{
+    margin: 30px auto;
+}
